@@ -1,7 +1,16 @@
 'use client'
 import { Document, Page, Text, StyleSheet, pdf,PDFViewer } from '@react-pdf/renderer';
+import { useEffect, useState } from 'react';
 
 export default function PdfGenerator() {
+
+const [mount, setMount] = useState(false)
+
+useEffect(()=>{
+    setMount(true)
+},[])
+
+if(!mount) return null
   return (
   <main className='min-h-screen h-full'>
     
