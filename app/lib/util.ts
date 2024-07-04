@@ -4,16 +4,16 @@ import FormData from 'form-data';
 
 export async function uploadToXano(pdfBuffer: Buffer, userId: string): Promise<string> {
   const formData = new FormData();
-  formData.append('file', pdfBuffer, 'generated.pdf');
+  formData.append('pdf', pdfBuffer, 'generated.pdf');
   formData.append('user-id', userId);
 
-  const response = await axios.post<{ url: string }>('https://xail-hf8i-wq8c.g7.xano.io/api:bOCuR_mP/uploads', formData, {
+  const response = await axios.post<any>('https://xail-hf8i-wq8c.g7.xano.io/api:bOCuR_mP/uploads', formData, {
     headers: {
       ...formData.getHeaders(),
     },
   });
 
-  return response.data.url;
+  return response.data.uploaded.pdf.url as string;
 }
 
 

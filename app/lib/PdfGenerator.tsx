@@ -27,6 +27,7 @@ const MyDocument = ({ data }:{data:any}) => (
 );
 
 export const createPdf = async (data:any) => {
+    console.log("DATA",data)
   const blob = await pdf(<MyDocument data={data} />).toBlob();
   return blob;
 };

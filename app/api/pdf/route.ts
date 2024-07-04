@@ -19,16 +19,17 @@ const body = await req.json()
 
       // Generate the PDF (returns a Blob)
       const pdfBlob = await createPdf("");
-      console.log("PDF BLOB",JSON.stringify(pdfBlob))
+      console.log("PDF BLOB",pdfBlob)
 
       // Convert the Blob to a Buffer
       const pdfBuffer = await blobToBuffer(pdfBlob);
-      console.log("PDF Buffer",JSON.stringify(pdfBlob))
+      console.log("PDF Buffer",pdfBlob)
 
 
-      // Upload the PDF to Xano
+    //   Upload the PDF to Xano
       const pdfUrl = await uploadToXano(pdfBuffer, body.userId || ''); // Pass userId here
-      console.log("PDF URL",JSON.stringify(pdfUrl))
+      console.log("PDF URL",JSON.stringify(pdfUrl)) 
+
 
 
 
