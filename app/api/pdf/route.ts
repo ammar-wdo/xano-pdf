@@ -16,7 +16,7 @@ const corsHeaders = {
 const body = await req.json()
 
 
-console.log(body)
+console.log(JSON.stringify(body))
 return NextResponse.json({success:true,message:"data recieved",url:""},{status:200,headers:corsHeaders})
         
     } catch (error) {
