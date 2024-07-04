@@ -1,3 +1,5 @@
+import { createPdf } from "@/app/lib/PdfGenerator";
+import { blobToBuffer, uploadToXano } from "@/app/lib/util";
 import { NextResponse } from "next/server";
 
 const corsHeaders = {
@@ -15,9 +17,18 @@ const corsHeaders = {
 
 const body = await req.json()
 
+      // Generate the PDF (returns a Blob)
+      const pdfBlob = await createPdf("");
+
+      // Convert the Blob to a Buffer
+      const pdfBuffer = await blobToBuffer(pdfBlob);
+
+      // Upload the PDF to Xano
+      const pdfUrl = await uploadToXano(pdfBuffer, body.userId || ''); // Pass userId here
+
 
 console.log(JSON.stringify(body))
-return NextResponse.json({success:true,message:"data recieved",url:""},{status:200,headers:corsHeaders})
+return NextResponse.json({success:true,message:"data recieved",url:pdfUrl},{status:200,headers:corsHeaders})
         
     } catch (error) {
         console.error(error)
