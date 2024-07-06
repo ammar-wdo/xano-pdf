@@ -28,7 +28,7 @@ const body = await req.json()
 
 
     //   Upload the PDF to Xano
-      const pdfUrl = await uploadToXano(pdfBuffer, body.userId || ''); // Pass userId here
+      const pdfUrl = await uploadToXano(pdfBuffer, body.user.id || ''); // Pass userId here
       console.log("PDF URL",JSON.stringify(pdfUrl)) 
 
 
