@@ -35,7 +35,7 @@ const body = await req.json()
 
 
 console.log(JSON.stringify(body))
-return NextResponse.json({success:true,message:"data recieved",url:pdfUrl,yourData:body},{status:200,headers:corsHeaders})
+return NextResponse.json({success:true,message:"File Uploaded",url:pdfUrl},{status:200,headers:corsHeaders})
         
     } catch (error) {
         console.error(error)
