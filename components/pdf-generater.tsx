@@ -1317,7 +1317,7 @@ const data = {
   },
 };
 
-type DataType = typeof data;
+export type DataType = typeof data;
 const formatNumber = (number: number) => {
   return new Intl.NumberFormat().format(number);
 };

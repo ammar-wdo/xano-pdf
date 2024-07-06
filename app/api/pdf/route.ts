@@ -13,13 +13,14 @@ const corsHeaders = {
 
 
   export const POST = async (req:Request)=>{
+    const body = await req.json()
     try {
 
-const body = await req.json()
+
 
 
       // Generate the PDF (returns a Blob)
-      const pdfBlob = await createPdf("");
+      const pdfBlob = await createPdf(body);
       console.log("PDF BLOB",pdfBlob)
 
       // Convert the Blob to a Buffer
@@ -35,10 +36,10 @@ const body = await req.json()
 
 
 console.log(JSON.stringify(body))
-return NextResponse.json({success:true,message:"File Uploaded",url:pdfUrl},{status:200,headers:corsHeaders})
+return NextResponse.json({success:true,message:"File Uploaded",url:pdfUrl,body},{status:200,headers:corsHeaders})
         
     } catch (error) {
         console.error(error)
-        return NextResponse.json({success:false,error:"Internal server error"},{status:500,headers:corsHeaders})
+        return NextResponse.json({success:false,error:"Internal server error",body},{status:500,headers:corsHeaders})
     }
   }
