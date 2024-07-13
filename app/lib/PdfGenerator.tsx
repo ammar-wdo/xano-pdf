@@ -1,9 +1,9 @@
 
 
 import React from 'react';
-import { Document, Page, Text, StyleSheet, pdf, View, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, StyleSheet, pdf, View, Image, Link } from '@react-pdf/renderer';
 import { DataType } from '@/components/pdf-generater';
-import Link from 'next/link';
+ 
 
  
 
