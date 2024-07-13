@@ -18,60 +18,40 @@ const DocumentView = ({data}:{data:DataType}) => {
         {/* main header */}
         <View style={styles.mainHeader}>
           <View style={styles.userInfo}>
-            <Image
+           {data.user.picture?.url && <Image
               style={styles.userPicture}
-              src={data.user.picture.url! as string}
-            />
+              src={data.user.picture.url }
+            />}
             <View style={styles.infoWrapper}>
               <Text style={styles.userName}>{data.user.name}</Text>
               <Text style={styles.lightFont}>{data.user.company}</Text>
               <Text style={styles.lightFont}>{data.user.contact_email}</Text>
               <Text style={styles.lightFont}>{data.user.phone}</Text>
-              {/* <View style={styles.userIcons}>
-                <View style={styles.userIcon}>
-                  <Link src={`https://wa.me/${data.user.phone}`}>
-                    <Image src={"/whatsapp.png"} />
-                  </Link>
-                </View>
-                <View style={styles.userIcon}>
-                  <Link style={{ width: "70%" }} src={`tel:${data.user.phone}`}>
-                    <Image src={"/phone.png"} />
-                  </Link>{" "}
-                </View>
-                <View style={styles.userIcon}>
-                  {" "}
-                  <Link
-                    style={{ width: "70%" }}
-                    src={`mailto:${data.user.contact_email}`}
-                  >
-                    <Image src={"/convert.png"} />
-                  </Link>
-                </View>
-              </View> */}
+           
             </View>
           </View>
-          <Image
+          {data.user.company_logo?.url && <Image
             style={styles.companyLogo}
-            src={data.user.company_logo.url! as string}
-          />
+            src={data.user.company_logo.url as string}
+          />}
         </View>
         {/* availabilities */}
         <View style={styles.availabilitiesContainer}>
           {data.availability.map((availability, index) => (
             <View style={styles.availabilityCard} key={index}>
               <View style={styles.availabilityImageContainer}>
-                <Image
+               { availability.project.main_image?.url&&<Image
                   src={availability.project.main_image.url}
                   style={styles.availabilityImage}
-                />
+                />}
               </View>
               {/* availability info */}
               <View style={styles.availabilityInfo}>
                 <Text style={styles.projectName}>
-                  {availability.project.project_name}
+                  {availability.project?.project_name}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
-                  {availability.unit_number}
+                  {availability.unit_number || ''}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
                   Developer: {availability.project.developer.name}
@@ -80,19 +60,19 @@ const DocumentView = ({data}:{data:DataType}) => {
                   District: {availability.project.district.name}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
-                  Handover: {availability.project.handover_date}
+                  Handover: {availability.project.handover_date || ''}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
                   Price: AED {formatNumber(availability.price)}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
-                  Service charge: AED {availability.project.service_charge}
+                  Service charge: AED {availability.project.service_charge || ''}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
-                  Unit Type: {availability.type}
+                  Unit Type: {availability.type || ''}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
-                  Area: {availability.area_sqft}
+                  Area: {availability.area_sqft || ''}
                 </Text>
                 <Text style={{ fontWeight: "semibold", fontSize: 12 }}>
                   Payment plan
@@ -206,11 +186,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     columnGap: 8,
     marginTop: 12,
+    flexWrap:'wrap'
   },
   availabilityCard: {
     display: "flex",
     flexDirection: "column",
-    width: "33%",
+    width: "32%",
     border: "1px solid #eee",
     borderRadius: 8,
     overflow: "hidden",

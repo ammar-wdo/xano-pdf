@@ -46,117 +46,120 @@ const data = {
     },
   },
   availability: [
+  
     {
-      id: "93df3a3b-3580-4306-993f-72a032df84de",
-      type: "3 BR",
-      price: 6325000,
-      unit_number: "VWZ-V1-F38-3804",
+      id: "04af6b75-ab62-4e66-bf0b-e79be22c6adc",
+      type: "1 BR",
+      price: 1000000,
+      unit_number: "001",
       tag: "",
       view: "",
-      floor: 38,
-      area_sqft: 2524.89,
-      project_id: "e91ee153-bfe9-4fe4-9595-fda93d0d83cd",
-      note: "3 BED Sky Villa + Pool (Community View)",
+      floor: 1,
+      area_sqft: 1000,
+      project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+      note: "",
       floorplan: [[]],
       project: {
-        id: "e91ee153-bfe9-4fe4-9595-fda93d0d83cd",
-        project_name: "VIEWZ by Danube",
+        id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+        project_name: "Safa One",
         resale_allowed_after: 0,
         amenities: [
           "Security and privacy",
           "Fitness facilities",
           "Swimming pools",
-          "Concierge services",
-          "Children's playground",
           "Parking facilities",
           "Retail & dining",
           "Spa and wellness facilities",
           "Luxury living",
-          "Outdoor spaces",
+          "Multipurpose room",
         ],
-        developer_id: "e899e957-48be-45bd-9193-cba0d3ee7df0",
+        developer_id: "e971cab7-d48e-407f-807d-1b8ea0d9a6f9",
         has_posthandover: false,
         min_price: 1600000,
-        max_price: 18240000,
-        service_charge: 18,
-        min_square_ft: 401,
-        max_square_ft: 7153.05,
+        max_price: 25827000,
+        service_charge: 23,
+        min_square_ft: 837.65,
+        max_square_ft: 5937.16,
         launch_date: null,
-        developer_name: "Danube Properties",
-        lat: "25.065796182341",
-        long: "55.140884405599",
-        handover_date: "2026-05-15",
+        developer_name: "Damac Properties",
+        lat: "25.181852744667",
+        long: "55.248819713015",
+        handover_date: "2026-03-31",
         dld: 4,
         oqood: 0,
         admin_fee: 0,
-        district_id: "d043405a-8ce3-4807-a794-5acb597338b8",
-        project_status: "Available",
+        district_id: "e1db3d88-1457-4fc9-972a-2661925be5c9",
+        project_status: "Sold out",
         emirate: "Dubai",
-        property_type: ["Apartment", "Villa"],
-        bedrooms: ["Studio", "1 BR", "2 BR", "3 BR", "4 BR", "5+ BR"],
-        updated_at: null,
+        property_type: ["Apartment", "Penthouse", "Duplex"],
+        bedrooms: ["1 BR", "2 BR", "3 BR", "4 BR", "5+ BR"],
+        updated_at: 1719657245545,
         distanc_to_marina: "",
         distance_to_downtown: "",
         distance_to_dxb: "",
         distance_al_maktoum: "",
         location: null,
         main_image: {
-          url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/7MH82rFDsgn2MsqTvwtDWmgsgdM/FIdHlQ../VIEWZ+by+Danube.jpg",
+          url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/uE4cs4ngckEDg256-ko-VG2BD5I/yzj0rg../Safa_One_0.jpg",
         },
         payment_plan: [
           {
-            id: "d93dcaf1-6647-45c8-bed0-ac73ba3cb5ae",
-            created_at: 1719234030304,
-            type: "64/36",
-            project_id: "e91ee153-bfe9-4fe4-9595-fda93d0d83cd",
-            downpayment_perc: 10,
-            prehandover_perc: 53,
-            onhandover_perc: 1,
-            posthandover_perc: 36,
+            id: "cd0ab324-f5e1-4a44-8256-12f0adaf6b0f",
+            created_at: 1719487354517,
+            type: "60/40",
+            project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+            downpayment_perc: 20,
+            prehandover_perc: 40,
+            onhandover_perc: 40,
+            posthandover_perc: 0,
             prehandover_schema: [
               {
+                name: "Down Payment",
+                percentage: 20,
+              },
+              {
                 name: "Instalment 1",
-                percentage: 10,
+                percentage: 3,
               },
               {
                 name: "Instalment 2",
-                percentage: 10,
+                percentage: 3,
               },
               {
                 name: "Instalment 3",
-                percentage: 1,
+                percentage: 3,
               },
               {
                 name: "Instalment 4",
-                percentage: 1,
+                percentage: 3,
               },
               {
                 name: "Instalment 5",
-                percentage: 1,
+                percentage: 4,
               },
               {
                 name: "Instalment 6",
-                percentage: 1,
+                percentage: 4,
               },
               {
                 name: "Instalment 7",
-                percentage: 1,
+                percentage: 4,
               },
               {
                 name: "Instalment 8",
-                percentage: 13,
+                percentage: 4,
               },
               {
                 name: "Instalment 9",
-                percentage: 1,
+                percentage: 4,
               },
               {
                 name: "Instalment 10",
-                percentage: 1,
+                percentage: 4,
               },
               {
                 name: "Instalment 11",
-                percentage: 1,
+                percentage: 2,
               },
               {
                 name: "Instalment 12",
@@ -167,63 +170,98 @@ const data = {
                 percentage: 1,
               },
               {
-                name: "Instalment 14",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 15",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 16",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 17",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 18",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 19",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 20",
-                percentage: 12,
-              },
-              {
-                name: "Instalment 21",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 22",
-                percentage: 1,
-              },
-              {
-                name: "Instalment 23",
-                percentage: 1,
+                name: "On Handover",
+                percentage: 40,
               },
             ],
-            posthandover_schema: [
+            posthandover_schema: [],
+          },
+          {
+            id: "2d7d105e-8f9f-4d4d-9566-5cbdb94cd5b2",
+            created_at: 1719487734170,
+            type: "90/10",
+            project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+            downpayment_perc: 20,
+            prehandover_perc: 70,
+            onhandover_perc: 10,
+            posthandover_perc: 0,
+            prehandover_schema: [
               {
-                name: "36 Months post Project completion from Jul 2026 To Jun 2029",
-                percentage: 1,
+                name: "Down Payment",
+                percentage: 20,
+              },
+              {
+                name: "Instalment 1",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 2",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 3",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 4",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 5",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 6",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 7",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 8",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 9",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 10",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 11",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 12",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 13",
+                percentage: 3,
+              },
+              {
+                name: "On Handover",
+                percentage: 10,
               },
             ],
+            posthandover_schema: [],
           },
         ],
         district: {
-          name: "JLT (Jumeirah Lake Towers)",
+          name: "Safa Park",
         },
         developer: {
-          name: "Danube Properties",
+          name: "Damac Properties",
           logo: {
-            url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/As7Dn5Z4voV4nj7TE8AjAibSy-I/-REAXQ../22.png",
+            url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/14GPkRZ9iVrHNcGwo5HfarhKRaw/voWx2Q../28.png",
           },
         },
+        documents:{
+          url:'https://www.google.com'
+        }
       },
     },
     {
@@ -438,6 +476,226 @@ const data = {
             url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/14GPkRZ9iVrHNcGwo5HfarhKRaw/voWx2Q../28.png",
           },
         },
+        documents:{
+          url:'www.google.com'
+        }
+      },
+    },
+    {
+      id: "04af6b75-ab62-4e66-bf0b-e79be22c6adc",
+      type: "1 BR",
+      price: 1000000,
+      unit_number: "001",
+      tag: "",
+      view: "",
+      floor: 1,
+      area_sqft: 1000,
+      project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+      note: "",
+      floorplan: [[]],
+      project: {
+        id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+        project_name: "Safa One",
+        resale_allowed_after: 0,
+        amenities: [
+          "Security and privacy",
+          "Fitness facilities",
+          "Swimming pools",
+          "Parking facilities",
+          "Retail & dining",
+          "Spa and wellness facilities",
+          "Luxury living",
+          "Multipurpose room",
+        ],
+        developer_id: "e971cab7-d48e-407f-807d-1b8ea0d9a6f9",
+        has_posthandover: false,
+        min_price: 1600000,
+        max_price: 25827000,
+        service_charge: 23,
+        min_square_ft: 837.65,
+        max_square_ft: 5937.16,
+        launch_date: null,
+        developer_name: "Damac Properties",
+        lat: "25.181852744667",
+        long: "55.248819713015",
+        handover_date: "2026-03-31",
+        dld: 4,
+        oqood: 0,
+        admin_fee: 0,
+        district_id: "e1db3d88-1457-4fc9-972a-2661925be5c9",
+        project_status: "Sold out",
+        emirate: "Dubai",
+        property_type: ["Apartment", "Penthouse", "Duplex"],
+        bedrooms: ["1 BR", "2 BR", "3 BR", "4 BR", "5+ BR"],
+        updated_at: 1719657245545,
+        distanc_to_marina: "",
+        distance_to_downtown: "",
+        distance_to_dxb: "",
+        distance_al_maktoum: "",
+        location: null,
+        main_image: {
+          url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/uE4cs4ngckEDg256-ko-VG2BD5I/yzj0rg../Safa_One_0.jpg",
+        },
+        payment_plan: [
+          {
+            id: "cd0ab324-f5e1-4a44-8256-12f0adaf6b0f",
+            created_at: 1719487354517,
+            type: "60/40",
+            project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+            downpayment_perc: 20,
+            prehandover_perc: 40,
+            onhandover_perc: 40,
+            posthandover_perc: 0,
+            prehandover_schema: [
+              {
+                name: "Down Payment",
+                percentage: 20,
+              },
+              {
+                name: "Instalment 1",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 2",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 3",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 4",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 5",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 6",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 7",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 8",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 9",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 10",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 11",
+                percentage: 2,
+              },
+              {
+                name: "Instalment 12",
+                percentage: 1,
+              },
+              {
+                name: "Instalment 13",
+                percentage: 1,
+              },
+              {
+                name: "On Handover",
+                percentage: 40,
+              },
+            ],
+            posthandover_schema: [],
+          },
+          {
+            id: "2d7d105e-8f9f-4d4d-9566-5cbdb94cd5b2",
+            created_at: 1719487734170,
+            type: "90/10",
+            project_id: "f6bd3a60-008d-4fcc-8fb9-c1a66c6986a2",
+            downpayment_perc: 20,
+            prehandover_perc: 70,
+            onhandover_perc: 10,
+            posthandover_perc: 0,
+            prehandover_schema: [
+              {
+                name: "Down Payment",
+                percentage: 20,
+              },
+              {
+                name: "Instalment 1",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 2",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 3",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 4",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 5",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 6",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 7",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 8",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 9",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 10",
+                percentage: 6,
+              },
+              {
+                name: "Instalment 11",
+                percentage: 4,
+              },
+              {
+                name: "Instalment 12",
+                percentage: 3,
+              },
+              {
+                name: "Instalment 13",
+                percentage: 3,
+              },
+              {
+                name: "On Handover",
+                percentage: 10,
+              },
+            ],
+            posthandover_schema: [],
+          },
+        ],
+        district: {
+          name: "Safa Park",
+        },
+        developer: {
+          name: "Damac Properties",
+          logo: {
+            url: "https://xail-hf8i-wq8c.g7.xano.io/vault/K7wzJo7B/14GPkRZ9iVrHNcGwo5HfarhKRaw/voWx2Q../28.png",
+          },
+        },
+        documents:{
+          url:'www.google.com'
+        }
       },
     },
   ],
@@ -1443,7 +1701,7 @@ const DocumentView = () => {
                 </View>
               </View>
 <View style={styles.buttonDownload}>
-  <Text style={styles.textButton}>Download brochure</Text>
+  <Link  href={availability.project.documents.url} style={styles.textButton}>Download brochure</Link>
 </View>
             </View>
           ))}
@@ -1517,11 +1775,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     columnGap: 8,
     marginTop: 12,
+    flexWrap:'wrap'
   },
   availabilityCard: {
     display: "flex",
     flexDirection: "column",
-    width: "33%",
+    width: "32%",
     border: "1px solid #eee",
     borderRadius: 8,
     overflow: "hidden",
