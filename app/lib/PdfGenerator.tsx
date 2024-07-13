@@ -49,7 +49,7 @@ const DocumentView = ({data}:{data:DataType}) => {
               {/* availability info */}
               <View style={styles.availabilityInfo}>
                 <Text style={styles.projectName}>
-                  {availability.project?.project_name}
+                Unit Number: {availability.project?.project_name}
                 </Text>
                 <Text style={styles.availabilityInfoText}>
                   {availability.unit_number || ''}
