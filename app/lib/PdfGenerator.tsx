@@ -112,9 +112,9 @@ const DocumentView = ({data}:{data:DataType}) => {
                   ))}
                 </View>
               </View>
-             { availability.project?.documents?.url && <View style={styles.buttonDownload}>
-  <Link  href={availability.project?.documents?.url || ''} style={styles.textButton}>Download brochure</Link>
-</View>}
+             { availability.project?.documents &&availability.project?.documents.map(doc=><View key={doc.url} style={styles.buttonDownload}>
+  <Link  href={doc.url || ''} style={styles.textButton}>Download brochure</Link>
+</View>) }
             </View>
           ))}
         </View>
