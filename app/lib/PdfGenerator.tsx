@@ -113,7 +113,7 @@ const DocumentView = ({data}:{data:DataType}) => {
                 </View>
               </View>
               <View style={styles.buttonDownload}>
-  <Link  href={availability.project.documents.url} style={styles.textButton}>Download brochure</Link>
+  <Link  href={availability.project?.documents?.url || ''} style={styles.textButton}>Download brochure</Link>
 </View>
             </View>
           ))}
