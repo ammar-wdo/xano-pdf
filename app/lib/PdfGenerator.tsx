@@ -39,7 +39,7 @@ const DocumentView = ({data}:{data:DataType}) => {
         {/* availabilities */}
         <View style={styles.availabilitiesContainer}>
           {data.availability.map((availability, index) => (
-            <View style={styles.availabilityCard} key={index}>
+            <View style={styles.availabilityCard} key={index}  wrap={false}>
               <View style={styles.availabilityImageContainer}>
                { availability.project.main_image?.url&&<Image
                   src={availability.project.main_image.url}
