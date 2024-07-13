@@ -3,6 +3,7 @@
 import React from 'react';
 import { Document, Page, Text, StyleSheet, pdf, View, Image } from '@react-pdf/renderer';
 import { DataType } from '@/components/pdf-generater';
+import Link from 'next/link';
 
  
 
@@ -111,8 +112,8 @@ const DocumentView = ({data}:{data:DataType}) => {
                   ))}
                 </View>
               </View>
-<View style={styles.buttonDownload}>
-  <Text style={styles.textButton}>Download brochure</Text>
+              <View style={styles.buttonDownload}>
+  <Link  href={availability.project.documents.url} style={styles.textButton}>Download brochure</Link>
 </View>
             </View>
           ))}
