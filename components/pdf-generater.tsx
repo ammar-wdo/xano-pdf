@@ -1549,7 +1549,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     columnGap: 8,
-    marginTop: 12,
+    marginTop: 24,
     flexWrap: "wrap",
   },
   availabilityCard: {
