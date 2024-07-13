@@ -243,12 +243,12 @@ const styles = StyleSheet.create({
     display:'flex',
     alignItems:'center',
     justifyContent:'center',
-    padding:12
+    padding:4
 
   },
   textButton:{
     color:'blue',
-    fontSize:12
+    fontSize:7
   }
 });
 
