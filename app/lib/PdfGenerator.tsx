@@ -49,35 +49,43 @@ const DocumentView = ({data}:{data:DataType}) => {
               {/* availability info */}
               <View style={styles.availabilityInfo}>
                 <Text style={styles.projectName}>
-                Unit Number: {availability.project?.project_name}
+                  {availability.project?.project_name}
                 </Text>
-                <Text style={styles.availabilityInfoText}>
-                  {availability.unit_number || ''}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Developer: {availability.project.developer.name}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  District: {availability.project.district.name}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Handover: {availability.project.handover_date || ''}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Price: AED {formatNumber(availability.price)}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Service charge: AED {availability.project.service_charge || ''}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Unit Type: {availability.type || ''}
-                </Text>
-                <Text style={styles.availabilityInfoText}>
-                  Area: {availability.area_sqft || ''}
-                </Text>
-                <Text style={{ fontWeight: "semibold", fontSize: 12 }}>
+
+                <View style={styles.availabilityInfoText}>
+                  <Text>Unit Number: </Text>{" "}
+                  <Text>{availability.unit_number || ""}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Developer:</Text>{" "}
+                  <Text>{availability.project.developer.name}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>District:</Text>{" "}
+                  <Text>{availability.project.district.name}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Handover:</Text>{" "}
+                  <Text>{availability.project.handover_date || ""}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Price: </Text>
+                  <Text> AED {formatNumber(availability.price)}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Service charge: </Text>
+                  <Text> AED {availability.project.service_charge || ""}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Unit Type: </Text>
+                  <Text>{availability.type || ""}</Text>
+                </View>
+                <View style={styles.availabilityInfoText}>
+                  <Text>Area:</Text> <Text>{availability.area_sqft || ""}</Text>
+                </View>
+                <View style={{ fontWeight: "semibold", fontSize: 12 }}>
                   Payment plan
-                </Text>
+                </View>
                 <View style={styles.planContainer}>
                   {availability.project.payment_plan.map((plan, i) => (
                     <View style={styles.planContainerCard} key={i}>
@@ -112,9 +120,16 @@ const DocumentView = ({data}:{data:DataType}) => {
                   ))}
                 </View>
               </View>
-             { availability.project?.documents &&availability.project?.documents.map(doc=><View key={doc.url} style={styles.buttonDownload}>
-  <Link  href={doc.url || ''} style={styles.textButton}>Download brochure</Link>
-</View>) }
+              <View style={{padding:7.5,display:'flex',gap:6}}>
+                {availability.project?.documents &&
+                  availability.project?.documents.map((doc) => (
+                    <View key={doc.url} style={styles.buttonDownload}>
+                      <Link href={doc.url || ""} style={styles.textButton}>
+                        Download brochure
+                      </Link>
+                    </View>
+                  ))}
+              </View>
             </View>
           ))}
         </View>
@@ -139,9 +154,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     columnGap: 20,
     alignItems: "center",
-    padding:6,
-    border:'1px solid #eee',
-    borderRadius:5
+    padding: 6,
+    border: "1px solid #eee",
+    borderRadius: 5,
   },
   userPicture: {
     width: 75,
@@ -186,8 +201,8 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     columnGap: 8,
-    marginTop: 12,
-    flexWrap:'wrap'
+    marginTop: 24,
+    flexWrap: "wrap",
   },
   availabilityCard: {
     display: "flex",
@@ -196,7 +211,7 @@ const styles = StyleSheet.create({
     border: "1px solid #eee",
     borderRadius: 8,
     overflow: "hidden",
-    paddingBottom:8
+    paddingBottom: 8,
   },
   availabilityImageContainer: {
     width: "100%",
@@ -211,19 +226,22 @@ const styles = StyleSheet.create({
   availabilityInfo: {
     padding: 8,
     display: "flex",
-    rowGap: 12,
+    rowGap: 4,
   },
   projectName: {
-    fontSize: 12,
-    fontWeight: "semibold",
+    fontSize: 14,
+    fontWeight: "bold",
+    marginBottom:6,
+    textOverflow:'ellipsis'
   },
   availabilityInfoText: {
     fontSize: 9,
     fontWeight: "light",
-    borderBottom:'1px solid #eee',
-    paddingBottom:4,
-  
-
+    borderBottom: "1px solid #eee",
+    paddingBottom: 4,
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
   },
   planContainer: {
     display: "flex",
@@ -231,26 +249,28 @@ const styles = StyleSheet.create({
     rowGap: 8,
     marginTop: 2,
   },
-  planContainerCard:{padding:12,borderRadius:5,backgroundColor:'#eee'},
+  planContainerCard: { padding: 12, borderRadius: 5, backgroundColor: "#eee" },
   planRecord: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 4,
   },
-  buttonDownload:{
-    marginTop:'auto',
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    padding:4
-
+  buttonDownload: {
+    marginTop: "auto",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+ 
+    borderRadius: 5,
+    padding: 4,
   },
-  textButton:{
-    color:'blue',
-    fontSize:7
-  }
+  textButton: {
+    color: "blue",
+    fontSize: 10,
+  },
 });
+
 
 
 export const createPdf = async (data:DataType) => {
